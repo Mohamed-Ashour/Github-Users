@@ -1,14 +1,10 @@
-body {
-  /*background-color: rgb(245, 245, 245);*/
-}
-
-header.row {
-  margin-top: 5px;
+header {
+  padding-top: 5px
 }
 
 .users {
   list-style-type: none;
-  height: 440px;
+  height: 480px;
   overflow: auto;
   margin-left: 0;
 }
@@ -24,4 +20,16 @@ header.row {
 
 .user-link {
   width: 95%;
+  margin-bottom: 9px;
+}
+
+.user-image {
+  width: 220px;
+  height: 220px;
+}
+
+.details {
+  display: inline-block;
+  width: 70%;
+  text-align: center;
 }

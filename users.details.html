@@ -1,11 +1,24 @@
-<img ng-src="{{ detailsCtrl.user.avatar_url }}" alt="user image" height="100" width="190" class="text-center"/>
-<hr>
-<span class="radius label">ID:</span><span class="text-center"> {{ detailsCtrl.user.id }}</span>
-<hr>
-<p><span class="radius label">IUsername:</span> {{ detailsCtrl.user.login }}</p>
-<hr>
-<p><span class="radius label">IName:</span> {{ detailsCtrl.user.name }}</p>
-<hr>
-<p><span class="radius label">IEmail:</span> {{ detailsCtrl.user.email }}</p>
-<hr>
-<p><span class="radius label">ICreated at:</span> {{ detailsCtrl.user.created_at }}</p>
+<img ng-src="{{ detailsCtrl.user.avatar_url }}" class="user-image thumbnail medium-8 medium-offset-4"/>
+
+<table class="responsive">
+  <tr height="60">
+    <td><span class="label">ID:</span></td>
+    <td>{{ detailsCtrl.user.id }}</td>
+  </tr>
+  <tr height="60">
+    <td><span class="label">Username:</span></td>
+    <td>{{ detailsCtrl.user.login }}</td>
+  </tr>
+  <tr height="60">
+    <td><span class="label">Name:</span></td>
+    <td>{{ detailsCtrl.user.name }}</td>
+  </tr>
+  <tr height="60">
+    <td><span class="label">Email:</span></td>
+    <td>{{ detailsCtrl.user.email }}</td>
+  </tr>
+  <tr height="60">
+    <td><span class="label">Created at:</span></td>
+    <td>{{ detailsCtrl.user.created_at }}</td>
+  </tr>
+</table>

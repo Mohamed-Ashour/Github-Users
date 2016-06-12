@@ -2,13 +2,11 @@ var usersControllers = angular.module('usersControllers', []);
 
 usersControllers.controller('UsersList', ['$http', function ($http) {
   var self = this;
-  // self.users = {};
   var usersCount = 0;
   var pagesShown = 1;
   var pageSize = 10;
 
   $http.get('https://api.github.com/users').success(function(data) {
-    //console.log(data);
     self.users = data;
     usersCount = self.users.length;
   });
@@ -31,11 +29,8 @@ usersControllers.controller('UsersList', ['$http', function ($http) {
 usersControllers.controller('UserDetails', ['$http', '$stateParams', function ($http, $stateParams) {
   var self = this;
   var login = $stateParams.login;
-  // console.log(login);
-  //self.user = {};
 
   $http.get('https://api.github.com/users/' + login ).success(function (data) {
     self.user = data;
-    // console.log(data);
   });
 }]);

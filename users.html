@@ -1,10 +1,13 @@
+<section class="small-5 medium-3 columns callout">
+  <ul class="users">
+    <li class="user" ng-repeat="user in ctrl.users | limitTo: ctrl.paginationLimit()">
+      <a href="#/users/{{ user.login }}" class="thumbnail user-link">
+        <img ng-src="{{ user.avatar_url }}" width="30"/>
+        {{ user.id + '. ' + user.login }}
+      </a>
+    </li>
+  </ul>
+  <button ng-show="ctrl.hasMoreItemsToShow()" ng-click="ctrl.showMoreItems()" class="button radius show-more">Show more ..</button>
+</section>
 
-<ul class="users">
-  <li class="user" ng-repeat="user in ctrl.users | limitTo: ctrl.paginationLimit()">
-    <a href="#/users/{{ user.login }}" class="thumbnail user-link">
-      <img ng-src="{{ user.avatar_url }}" width="30"/>
-      {{ user.id + '. ' + user.login }}
-    </a>
-  </li>
-</ul>
-<button ng-show="ctrl.hasMoreItemsToShow()" ng-click="ctrl.showMoreItems()" class="button radius show-more">Show more ..</button>
+<section class="small-7 medium-9 columns callout" ui-view></section>
