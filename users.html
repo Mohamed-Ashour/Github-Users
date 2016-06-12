@@ -1,0 +1,10 @@
+
+<ul class="users">
+  <li class="user" ng-repeat="user in ctrl.users | limitTo: ctrl.paginationLimit()">
+    <a href="#/users/{{ user.login }}" class="thumbnail user-link">
+      <img ng-src="{{ user.avatar_url }}" width="30"/>
+      {{ user.id + '. ' + user.login }}
+    </a>
+  </li>
+</ul>
+<button ng-show="ctrl.hasMoreItemsToShow()" ng-click="ctrl.showMoreItems()" class="button radius show-more">Show more ..</button>

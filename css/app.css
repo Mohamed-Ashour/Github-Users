@@ -1,0 +1,27 @@
+body {
+  /*background-color: rgb(245, 245, 245);*/
+}
+
+header.row {
+  margin-top: 5px;
+}
+
+.users {
+  list-style-type: none;
+  height: 440px;
+  overflow: auto;
+  margin-left: 0;
+}
+
+.user {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.show-more {
+  width: 100%;
+}
+
+.user-link {
+  width: 95%;
+}
