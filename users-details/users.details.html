@@ -1,24 +1,24 @@
-<img ng-src="{{ detailsCtrl.user.avatar_url }}" class="user-image thumbnail medium-8 medium-offset-4"/>
+<img ng-src="{{ vm.user.avatar_url }}" class="user-image thumbnail medium-8 medium-offset-4"/>
 
 <table class="responsive">
   <tr height="60">
     <td><span class="label">ID:</span></td>
-    <td>{{ detailsCtrl.user.id }}</td>
+    <td>{{ vm.user.id }}</td>
   </tr>
   <tr height="60">
     <td><span class="label">Username:</span></td>
-    <td>{{ detailsCtrl.user.login }}</td>
+    <td>{{ vm.user.login }}</td>
   </tr>
   <tr height="60">
     <td><span class="label">Name:</span></td>
-    <td>{{ detailsCtrl.user.name }}</td>
+    <td>{{ vm.user.name }}</td>
   </tr>
   <tr height="60">
     <td><span class="label">Email:</span></td>
-    <td>{{ detailsCtrl.user.email }}</td>
+    <td>{{ vm.user.email }}</td>
   </tr>
   <tr height="60">
     <td><span class="label">Created at:</span></td>
-    <td>{{ detailsCtrl.user.created_at }}</td>
+    <td>{{ vm.user.created_at }}</td>
   </tr>
 </table>
