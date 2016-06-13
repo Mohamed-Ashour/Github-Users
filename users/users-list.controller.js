@@ -1,7 +1,13 @@
 (function () {
+  'use strict';
 
-  angular.module('myApp')
-    .controller('UsersListController', ['listService', function (listService) {
+  angular
+    .module('myApp')
+    .controller('UsersListController', UsersListController);
+
+    UsersListController.$inject = ['listService'];
+
+    function UsersListController (listService) {
       var vm = this;
       var usersCount = 0;
       var pagesShown = 1;
@@ -25,6 +31,6 @@
           usersCount = vm.users.length;
         });
       }
-    }]);
+    }
 
 })();

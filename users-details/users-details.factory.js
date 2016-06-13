@@ -1,7 +1,13 @@
 (function () {
+  'use strict';
 
-  angular.module('myApp')
-    .factory('detailsService', ['$http', function ($http) {
+  angular
+    .module('myApp')
+    .factory('detailsService', detailsService);
+
+    detailsService.$inject = ['$http'];
+
+    function detailsService ($http) {
       return { getDetails : getDetails };
 
       function getDetails(login) {
@@ -9,6 +15,6 @@
           return response.data
         });
       }
-    }]);
+    }
 
 })();

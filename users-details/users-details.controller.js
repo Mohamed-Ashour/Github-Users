@@ -1,7 +1,13 @@
 (function () {
+  'use strict';
 
-  angular.module('myApp')
-    .controller('UserDetailsController', [ 'detailsService', '$stateParams', function (detailsService, $stateParams ) {
+  angular
+    .module('myApp')
+    .controller('UserDetailsController', UserDetailsController);
+
+    UserDetailsController.$inject = [ 'detailsService', '$stateParams'];
+
+    function UserDetailsController (detailsService, $stateParams ) {
       var vm = this;
       var login = $stateParams.login;
 
@@ -12,6 +18,6 @@
           vm.user = data;
         });
       }
-    }]);
+    }
 
 })();

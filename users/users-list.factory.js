@@ -1,7 +1,13 @@
 (function () {
+  'use strict';
 
-  angular.module('myApp')
-    .factory('listService', ['$http', function ($http) {
+  angular
+    .module('myApp')
+    .factory('listService', listService);
+
+    listService.$inject = ['$http'];
+
+    function listService($http) {
       return { listUsers : listUsers };
 
       function listUsers() {
@@ -9,6 +15,6 @@
           return response.data;
         });
       }
-    }]);
+    }
 
 })();
