@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  desctipe('github api service', function () {
+  describe('github api service', function () {
     var listService, httpBackend, detailsService;
 
     beforeEach(module('myApp'));
@@ -17,18 +17,19 @@
     });
 
     it('should return list of users', function () {
-      var returnData = [
-        {
-          "login": "mojombo",
-          "id": 1,
-          "avatar_url": "https://avatars.githubusercontent.com/u/1?v=3"
-        },
-        {
-          "login": "defunkt",
-          "id": 2,
-          "avatar_url": "https://avatars.githubusercontent.com/u/2?v=3"
-        }
-      ];
+      var returnData =
+        [
+          {
+            "login": "mojombo",
+            "id": 1,
+            "avatar_url": "https://avatars.githubusercontent.com/u/1?v=3"
+          },
+          {
+            "login": "defunkt",
+            "id": 2,
+            "avatar_url": "https://avatars.githubusercontent.com/u/2?v=3"
+          }
+        ];
 
       httpBackend.expectGET('https://api.github.com/users').respond(returnData);
 
@@ -44,16 +45,17 @@
     });
 
     it('should return user details', function () {
-      var returnData = {
-        "login": "mojombo",
-        "id": 1,
-        "avatar_url": "https://avatars.githubusercontent.com/u/1?v=3"
-      };
+      var returnData =
+        {
+          "login": "mojombo",
+          "id": 1,
+          "avatar_url": "https://avatars.githubusercontent.com/u/1?v=3"
+        };
 
-      httpBackend.expectGET('https://api.github.com/users/' + 'mojombo').respond(returnData);
+      httpBackend.expectGET('https://api.github.com/users/mojombo').respond(returnData);
 
       var result;
-      listService.listUsers('mojombo').then(function(data) {
+      detailsService.getDetails('mojombo').then(function(data) {
         result = data;
       });
 
